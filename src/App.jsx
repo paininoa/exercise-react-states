@@ -31,11 +31,15 @@ la password generata in un elemento <div> o <input>.
 import { useState } from "react";
 import "./App.css";
 import DayNight from "./DayNight/DayNight";
+import Volume from "./Volume/Volume";
+import PasswordGenerator from "./PasswordGenerator/PasswordGenerator";
 
 function App() {
   return (
     <>
       <DayNight />
+      <Volume />
+      <PasswordGenerator />
     </>
   );
 }
