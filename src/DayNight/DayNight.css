@@ -1,0 +1,9 @@
+.night {
+  padding: 3rem;
+  background-color: darkblue;
+  color: white;
+}
+.day {
+  padding: 3rem;
+  background-color: antiquewhite;
+}
