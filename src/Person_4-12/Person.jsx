@@ -1,4 +1,6 @@
-/*
+/* 
+// ESERCIZIO EXTRA 04/12 -----------------------------------------
+
 A partire da uno state person, che rappresenta le caratteristiche di una persona:
 {
    name: 'Tizio',

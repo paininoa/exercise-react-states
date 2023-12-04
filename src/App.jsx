@@ -28,6 +28,20 @@ casuale della lunghezza specificata e aggiorna lo stato password. Visualizza
 la password generata in un elemento <div> o <input>.
 */
 
+/* 
+// ESERCIZIO EXTRA 04/12 -----------------------------------------
+
+A partire da uno state person, che rappresenta le caratteristiche di una persona:
+{
+   name: 'Tizio',
+   age: 40,
+   occupation: 'Student'
+}
+Create un applicazione react che vi permette di cambiare le proprietà della persona.
+Un elemento select, vi permette di selezionare le chiavi.
+Vari input, vi permettono di selezionare i nuovi valori name, age e occupation.
+*/
+
 import { useState } from "react";
 import "./App.css";
 import DayNight from "./DayNight/DayNight";
