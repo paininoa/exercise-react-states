@@ -15,15 +15,15 @@ import "./Volume.css";
 import { useState } from "react";
 
 export default function () {
-  const [value, setValue] = useState(70);
+  const [value, setValue] = useState("70");
 
   return (
     <div className="wrapperVolume">
       <h1>2. Volume slider</h1>
       <input
         type="range"
-        min={0}
-        max={100}
+        min="0"
+        max="100"
         value={value}
         onChange={(event) => {
           setValue(event.target.valueAsNumber);

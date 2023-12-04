@@ -14,23 +14,44 @@ import "./PasswordGenerator.css";
 import { useState } from "react";
 
 export default function () {
-  const [number, setNumber] = useState(4);
-  const [passwordLength, password] = useState(setNumber);
+  const [charCount, setCharCount] = useState("");
+  const [pwd, setPwd] = useState("");
+  const [error, setError] = useState("");
 
-  const handleClick = (event) => {};
+  const handleClick = (event) => {
+    if (charCount < 4 || charCount > 16) {
+      setPwd("");
+      setError("You need to define a legth between 4 and 16 characters");
+      return;
+    }
+
+    const alphabet =
+      "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    const alphabetArray = alphabet.split("");
+    let newPwd = "";
+
+    for (let i = 0; i < charCount; i++) {
+      const randomIndex = Math.floor(Math.random() * alphabetArray.length);
+      newPwd += alphabetArray[randomIndex];
+    }
+    setPwd(newPwd);
+    setCharCount("");
+    setError("");
+  };
 
   return (
     <div className="wrapperPassword">
       <h1>3. Password Generator</h1>
-      <h4>How many characters?</h4>
+      <h4>How many characters? 4 to 16</h4>
       <input
         type="number"
-        value={passwordLength}
-        onChange={(e) => setNumber(e.target.valueAsNumber)}
+        value={charCount}
+        onChange={(e) => setCharCount(e.target.valueAsNumber)}
       />
 
       <button onClick={handleClick}>Generate</button>
-      <div>Passwor generated: {password}</div>
+      <div>Passwor generated: {pwd}</div>
+      <div>{error}</div>
     </div>
   );
 }
