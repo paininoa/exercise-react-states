@@ -1,0 +1,9 @@
+.wrapperPerson {
+  padding: 3rem;
+  background-color: rgb(223, 238, 196);
+}
+.wrapperPerson ul {
+  list-style-type: none;
+  padding: 0px;
+  margin-bottom: 20px;
+}

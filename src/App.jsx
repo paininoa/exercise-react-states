@@ -33,6 +33,7 @@ import "./App.css";
 import DayNight from "./DayNight/DayNight";
 import Volume from "./Volume/Volume";
 import PasswordGenerator from "./PasswordGenerator/PasswordGenerator";
+import Person from "./Person_4-12/Person";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
       <DayNight />
       <Volume />
       <PasswordGenerator />
+      <Person />
     </>
   );
 }
