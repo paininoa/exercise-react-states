@@ -27,13 +27,12 @@ export default function () {
 
   return (
     <div className="wrapperPerson">
-      <h1>4. Change Person detail (04/12)</h1>
+      <h1>4. Change Person details (04/12)</h1>
       <ul>
         <li>Name: {person.name}</li>
         <li>Age: {person.age}</li>
         <li>Occupation: {person.occupation}</li>
       </ul>
-
       <select
         value={selectedKey}
         onChange={(e) => setSelectedKey(e.target.value)}
@@ -44,7 +43,7 @@ export default function () {
       </select>
 
       <input
-        type="text"
+        type={typeof person[selectedKey] === "string" ? "text" : "number"}
         value={newValue}
         onChange={(e) => setNewValue(e.target.value)}
       />
